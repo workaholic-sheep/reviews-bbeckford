@@ -1,1 +1,146 @@
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Share your experience with B. Beckford Law Firm.">
+    <title>Share Your Experience | B. Beckford Law Firm</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="brand">
+                <span class="brand-name">B. BECKFORD LAW</span>
+                <span class="brand-subtitle">LAW FIRM</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="main-container">
+
+        <section class="review-card">
+
+            <div class="intro">
+                <span class="eyebrow">YOUR FEEDBACK MATTERS</span>
+                <h1>Share Your Experience</h1>
+                <p>
+                    Thank you for choosing B. Beckford Law Firm.
+                    We value your feedback and appreciate you
+                    taking the time to share your experience.
+                </p>
+            </div>
+
+            <div class="form-divider"></div>
+
+            <form id="reviewForm">
+
+                <div class="form-group">
+                    <label for="clientName">Your Name <span>*</span></label>
+                    <input
+                        type="text"
+                        id="clientName"
+                        name="clientName"
+                        placeholder="Enter your full name"
+                        maxlength="100"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label>Your Rating <span>*</span></label>
+                    <div class="star-rating" id="starRating" role="group"
+                         aria-label="Select a rating from one to five stars">
+                        <button type="button" class="star" data-rating="1"
+                                aria-label="1 star">★</button>
+                        <button type="button" class="star" data-rating="2"
+                                aria-label="2 stars">★</button>
+                        <button type="button" class="star" data-rating="3"
+                                aria-label="3 stars">★</button>
+                        <button type="button" class="star" data-rating="4"
+                                aria-label="4 stars">★</button>
+                        <button type="button" class="star" data-rating="5"
+                                aria-label="5 stars">★</button>
+                    </div>
+                    <input type="hidden" id="rating" name="rating">
+                    <small id="ratingText">Select your rating</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="feedback">Your Feedback <span>*</span></label>
+                    <textarea
+                        id="feedback"
+                        name="feedback"
+                        rows="5"
+                        minlength="10"
+                        maxlength="1000"
+                        placeholder="Tell us about your experience..."
+                        required
+                    ></textarea>
+                    <div class="character-count">
+                        <span id="characterCount">0</span>/1000 characters
+                    </div>
+                    <small>
+                        Please do not include confidential legal,
+                        immigration, or personal case information.
+                    </small>
+                </div>
+
+                <div class="consent-section">
+                    <h2>Marketing Permission <span>*</span></h2>
+                    <p>
+                        May we use your name and feedback in our
+                        marketing materials, website, or social media?
+                    </p>
+
+                    <label class="consent-option">
+                        <input type="radio" name="marketingConsent" value="yes" required>
+                        <span>Yes, I give permission.</span>
+                    </label>
+
+                    <label class="consent-option">
+                        <input type="radio" name="marketingConsent" value="no" required>
+                        <span>No, I do not give permission.</span>
+                    </label>
+
+                    <small>
+                        Your answer will not affect your ability to submit
+                        your review or receive legal services.
+                    </small>
+                </div>
+
+                <button type="submit" id="submitButton" disabled>
+                    Submit Review
+                </button>
+
+                <p class="privacy-note">
+                    Your review will be subject to review before publication.
+                    Your feedback will not be automatically published.
+                </p>
+
+            </form>
+
+            <div id="successMessage" class="success-message" hidden>
+                <h2>Thank You!</h2>
+                <p>Your review has been received.</p>
+            </div>
+
+            <div id="errorMessage" class="error-message" hidden>
+                <p id="errorText"></p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentYear"></span> B. Beckford Law Firm. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+
